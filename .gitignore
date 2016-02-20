@@ -1,4 +1,5 @@
 # Jekyll ignores
+.sass-cache
 _site
 
 # Windows image file caches
