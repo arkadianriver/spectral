@@ -4,12 +4,14 @@
 # Site settings
 title: Horváth Dominik
 description: |
-  PHP Developer
+  Web-programozó
 owner: Horváth Dominik # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
-email: djsmemories@gmail.com
+email: djsmemories at gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dominikh.com" # the base hostname & protocol for your site
+slogan: Szakértelem és megbízhatóság
+wisdom: Egy weboldal akkor jó, ha a kitűzött célnak megfelel!
 social:
   twitter: https://twitter.com/djsmemories
   github: https://github.com/djsmemories
