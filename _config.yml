@@ -2,22 +2,22 @@
 #
 
 # Site settings
-title: Spectral
+title: Horváth Dominik
 description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
+  Web-programozó
+owner: Horváth Dominik # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+email: djsmemories at gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://dominikh.com" # the base hostname & protocol for your site
+slogan: Szakértelem és megbízhatóság
+wisdom: Egy weboldal akkor jó, ha a kitűzött célnak megfelel!
 social:
-  twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
+  twitter: https://twitter.com/djsmemories
+  github: https://github.com/djsmemories
+  linkedin-square: https://linkedin.com/in/dominik-horváth-45a81062
+  facebook-official: https://facebook.com/ffhtc
+  google-plus-square: https://plus.google.com/u/0/+DominikHorváthHungary
   #email: /contact/
   #flickr:
   #instagram:
