@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-$baseurl: '{{ site.baseurl }}/images';
+$baseurl: "{{ site.baseurl }}/images";
 
 @import 'libs/vars';
 @import 'libs/functions';
@@ -1488,6 +1488,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		width: 50%;
+		margin: 0 auto;
 
 		h2 {
 			@include vendor('transform', 'scale(1)');
