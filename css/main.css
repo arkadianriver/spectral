@@ -2437,7 +2437,9 @@ body.is-menu-visible #menu {
       right: 0; }
   #banner p {
     letter-spacing: 0.225em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 50%;
+    margin: 0 auto; }
     #banner p a {
       color: inherit; }
   #banner .more {
