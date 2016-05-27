@@ -2438,8 +2438,9 @@ body.is-menu-visible #menu {
   #banner p {
     letter-spacing: 0.225em;
     text-transform: uppercase;
-    width: 50%;
-    margin: 0 auto; }
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1em;}
     #banner p a {
       color: inherit; }
   #banner .more {
