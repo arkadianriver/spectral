@@ -2688,3 +2688,9 @@ body.is-mobile.landing .wrapper.style4 {
   background-size: cover; }
 body.is-mobile.landing #footer {
   background-color: #1d242a; }
+
+.foot-text {
+  font-size: .75em;
+  text-transform: uppercase;
+  color: #969595;
+}
