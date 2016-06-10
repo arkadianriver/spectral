@@ -7,8 +7,18 @@ excerpt: Join us one more time for Refresh Austin Javascript edition!
 
 JAVASCRIPT LIGHTNING TALKS
 
-Interested in sharing your knowledge of Javascript?
+Intro to VueJS, Jason Romero
 
-Sign up for a Javascript lighting talk! We're looking for 5 - 10 minute talks on any subject JS-related.
+SOLID-ly functional, Jared Stilwell
+
+Your Own Dropbox: Starting with the Tessel 2, Chris Boette
+
+We still have room for a couple more talks, so sign up below!
 
 [SIGN UP HERE](https://docs.google.com/forms/d/18GGZmcmU9PTflWBepDDDUGY7d8PYsY9yFQMLRuRpNms/viewform)
+
+THE ECONOMY OF KEYSTROKES
+
+Kyle Simpson ([@getify](http://twitter.com/getify)))
+
+What are you buying with that keystroke?
