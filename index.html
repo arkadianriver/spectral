@@ -22,8 +22,8 @@ layout: landing
 								{% endfor %}
 							</header>
 							<h2>Sponsor</h2>
-							<p>Huge thanks to our sponsor this month, <a href="http://devbootcamp.com/">Dev Bootcamp!</a></p>
-							<img style="width:200px;" src="{{ site.url }}/images/sponsors/dbc-white-transparent.png" alt="">
+							<p>Huge thanks to our August sponsor, <a href="http://devbootcamp.com/">Condé Nast</a>!</p>
+							<img style="width:200px;" src="{{ site.url }}/images/sponsors/conde-nast-logo-white.png">
 						</div>
 					</section>
 
@@ -33,7 +33,7 @@ layout: landing
 								<h2 id="previous">Previous meetings</h2>
 							</header>
 							<ul class="features">
-								{% for post in site.posts %}
+								{% for post in site.posts offset:1 %}
 								<li>
 									<h3>{{ post.title }}</h3>
 									<p><em>{{ post.date | date: '%B %d, %Y' }}</em></p>
