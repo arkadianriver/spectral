@@ -5,9 +5,9 @@
 title: Jacky Han
 description: |
   Jacky Han's personal website
-owner: Your Name # or company name
+owner: Jacky Han # or company name
 first_published: 2017 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+email: jackyhan95@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 social:
