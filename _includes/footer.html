@@ -21,6 +21,12 @@
     {% endif %}
     {{ thisyear }}
     {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+  </ul>
+  <br/>
+  <ul class="credits">
+    {% if site.developer %}<li>developer: <a href="{{ site.developer_site }}" target="_blank">{{ site.developer }}</a></li>{% endif %}
     <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
     <li>Built with: <a href="http://jekyllrb.com" target="_blank">Jekyll</a></li>
   </ul>

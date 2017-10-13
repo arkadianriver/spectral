@@ -1,0 +1,7 @@
+---
+layout: post
+title: Mein Blog
+date: 2017-10-11T14:37:44.000Z
+---
+
+<img src="/images/pic01.jpg" class="fit image"> Hier entstehen bald Beiträge und Dokumentationen meiner Arbeit.

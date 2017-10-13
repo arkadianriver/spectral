@@ -910,7 +910,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			&:before {
 				display: block;
-				color: _palette(accent2, bg);
+				color: _palette(accent1, bg);
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -1293,7 +1293,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include vendor('transform', 'translateX(20em)');
 		@include vendor('transition', 'transform #{_duration(menu)} ease');
 		-webkit-overflow-scrolling: touch;
-		background: _palette(accent1, bg);
+		background: _palette(accent8, bg);
 		color: _palette(accent1, fg-bold);
 		height: 100%;
 		max-width: 80%;
@@ -1500,7 +1500,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			z-index: 1;
 
 			&:before, &:after {
-				@include vendor('transition', 'width 0.85s ease');
+				@include vendor('transition', 'width 0.5s ease');
 				@include vendor('transition-delay', '0.25s');
 				background: _palette(fg-bold);
 				content: '';
@@ -1532,7 +1532,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		.more {
 			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
-			@include vendor('transition-delay', '3.5s');
+			@include vendor('transition-delay', '1.5s');
 			@include vendor('transform', 'translateY(0)');
 			border: none;
 			bottom: 0;
@@ -1570,7 +1570,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.25s');
+			@include vendor('transition-delay', '0.5s');
 			content: '';
 			background: _palette(bg);
 			display: block;
@@ -1751,6 +1751,45 @@ $baseurl: '{{ site.baseurl }}/images';
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.8em;
+			letter-spacing: _size(letter-spacing-alt);
+			list-style: none;
+			padding: 0;
+			text-transform: uppercase;
+
+			li {
+				border-left: solid 1px _palette(fg-light);
+				display: inline-block;
+				line-height: 1em;
+				margin-left: 1em;
+				padding-left: 1em;
+
+				&:first-child {
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+
+				a {
+					color: inherit;
+
+					&:hover {
+						color: _palette(fg);
+					}
+				}
+
+				@include breakpoint(xsmall) {
+					border: 0;
+					display: block;
+					line-height: 1.65em;
+					margin: 0;
+					padding: 0.5em 0;
+				}
+			}
+		}
+
+		.credits {
+			color: _palette(fg-light);
+			font-size: 0.55em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
 			padding: 0;
