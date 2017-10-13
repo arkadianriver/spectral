@@ -2,25 +2,30 @@
 #
 
 # Site settings
-title: Spectral
+title: Marcel Skorupski
 description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
-first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+  Das Geheimnis des Erfolges?
+  Anders sein als die anderen!
+owner: Marcel Skorupski # or company name
+developer: Ramon Wedowski
+developer_site: https://ramonwedowski.de
+first_published: 2017 # if migrating another site, the year of your first publish
+email: m.skorupski@gmx.de
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://marcelskorupski.de" # the base hostname & protocol for your site
+quote_label: Woody Allen
+quote_caption: |
+  „Das Geheimnis des Erfolges?
+  Anders sein als die anderen!"
 social:
-  twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
-  #email: /contact/
+  #twitter: https://twitter.com/<username>
+  #github: https://github.com/<username>
+  #linkedin-square: https://linkedin.com/in/<username>
+  facebook-official: https://facebook.com/Christa.Rhs
+  #google-plus-square: https://plus.google.com/u/0/+<username>
+  email: mailto:m.skorupski@gmx.de
   #flickr:
-  #instagram:
+  instagram: https://www.instagram.com/marcel.skorupski
   #youtube-square:
   #spotify:
   #stack-overflow:

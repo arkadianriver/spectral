@@ -14,8 +14,8 @@
 // Duration.
 	$duration: (
 		transitions:		0.2s,
-		menu:				0.5s,
-		fadein:				3s
+		menu:				0.2s,
+		fadein:				1s
 	);
 
 // Size.
@@ -114,6 +114,16 @@
 
 		accent7: (
 			bg:				#ffffff,
+			fg-bold:		#2E3842,
+			fg:				#4E4852,
+			fg-light:		#8E8892,
+			border:			#dfdfdf,
+			border-bg:		rgba(0,0,0,0.0375),
+			border2:		#bfbfbf,
+			border2-bg:		rgba(0,0,0,0.1)
+		),
+		accent8: (
+			bg:				#2D3841,
 			fg-bold:		#2E3842,
 			fg:				#4E4852,
 			fg-light:		#8E8892,
