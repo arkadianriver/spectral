@@ -1732,9 +1732,9 @@ $baseurl: '{{ site.baseurl }}/images';
 /* Footer */
 
 	#footer {
-		@include padding(6em, 0);
+		@include padding(1em, 0);
 		background-color: darken(_palette(bg), 8);
-		text-align: center;
+		text-align: left;
 
 		.icons {
 			font-size: 1.25em;
@@ -1753,8 +1753,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
-			padding: 0;
-			text-transform: uppercase;
+			padding: 0 0 0 5em;
 
 			li {
 				border-left: solid 1px _palette(fg-light);
@@ -1809,7 +1808,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: #5f5f60;
 		}
 	}
 
