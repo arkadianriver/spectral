@@ -904,7 +904,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				$j: 0.035 * $i;
 
 				&:nth-child(#{$i}) {
-					background-color: rgba(0,0,0, $j);
+					background-color: rgba(0,0,0, 0);
 				}
 			}
 
