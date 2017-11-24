@@ -73,8 +73,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
-		border-bottom: dotted 1px;
-		color: inherit;
+		color: #27aaa4;
 		text-decoration: none;
 
 		&:hover {
@@ -1628,15 +1627,17 @@ $baseurl: '{{ site.baseurl }}/images';
 	#cta {
 		.inner {
 			@include vendor('display', 'flex');
-			max-width: 45em;
+			max-width: 53em;
 
 			header {
 				@include vendor('order', '1');
 				padding-right: 3em;
 				width: 70%;
 
+
 				p {
 					color: inherit;
+					width: 70%;
 				}
 			}
 
