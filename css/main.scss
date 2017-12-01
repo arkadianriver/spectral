@@ -837,11 +837,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-overflow: ellipsis;
 
 		&:hover {
-			background-color: _palette(border-bg);
+			background-color: _palette(accent7, border);
 		}
 
 		&:active {
-			background-color: _palette(border2-bg);
+			background-color: _palette(accent7, border);
 		}
 
 		&.icon {
@@ -1633,9 +1633,79 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+/* ONE */
+	#one {
+		background-color: #ffffff;
+		& p {
+			color: #21b2a6;
+		}
+		& h2 {
+			color: #21b2a6;
+		}
+	}
+
+/* Sponsors */
+
+#sponsors {
+	@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))','url("#{$baseurl}/patrocinios.jpg")'));
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.inner {
+		@include vendor('display', 'flex');
+		max-width: 53em;
+
+		header {
+			@include vendor('order', '1');
+			padding-right: 3em;
+			width: 70%;
+			& h2 {
+				color: #000;
+			}
+
+			p {
+				color: rgb(74, 74, 74);
+				width: 70%;
+			}
+		}
+
+		.actions {
+			@include vendor('order', '2');
+			width: 30%;
+		}
+
+		@include breakpoint(medium) {
+			display: block;
+			text-align: center;
+
+			header {
+				padding-right: 0;
+				width: 100%;
+			}
+
+			.actions {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 20em;
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(small) {
+			.actions {
+				max-width: none;
+			}
+		}
+	}
+}
+
 /* CTA */
 
 	#cta {
+		@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/fondo_cta.jpg")'));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		.inner {
 			@include vendor('display', 'flex');
 			max-width: 53em;
@@ -1832,7 +1902,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/fondo_cta.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpeg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
