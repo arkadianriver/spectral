@@ -9,7 +9,7 @@ owner: GalsTech # or company name
 first_published:  2017 # if migrating another site, the year of your first publish
 email: info@galstech.org
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/GalsTech/galstech" # the base hostname & protocol for your site
+url: "http://www.galstech.org" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/galstech_
   github: https://github.com/galstech
