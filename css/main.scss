@@ -196,6 +196,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+
 	.align-left {
 		text-align: left;
 	}
@@ -207,6 +208,15 @@ $baseurl: '{{ site.baseurl }}/images';
 	.align-right {
 		text-align: right;
 	}
+
+	.img-responsive{
+		max-width: 100%;
+		height: auto;
+		display:block;
+		margin: auto;
+	}
+
+	
 
 /* Section/Article */
 
@@ -901,13 +911,13 @@ $baseurl: '{{ site.baseurl }}/images';
 				$j: 0.035 * $i;
 
 				&:nth-child(#{$i}) {
-					background-color: rgba(0,0,0, $j);
+					background-color: rgba(0,0,0, 0);
 				}
 			}
 
 			&:before {
 				display: block;
-				color: _palette(accent2, bg);
+				color: _palette(accent9, bg);
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -1245,7 +1255,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style3 {
-			@include wrapper(accent5);
+			@include wrapper(accent8);
 		}
 
 		&.style4 {
@@ -1479,6 +1489,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'center');
+		@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))', 'url("#{$baseurl}/banner.jpeg")'));
 		cursor: default;
 		height: 100vh;
 		min-height: 35em;
@@ -1519,8 +1530,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		p {
-			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
+			margin: auto;
+			color:_palette(bg);
+			width: 50%;
+			margin-top: 5%;
 
 			a {
 				color: inherit;
