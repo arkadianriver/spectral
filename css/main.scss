@@ -73,8 +73,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
-		border-bottom: dotted 1px;
-		color: inherit;
+		color: #27aaa4;
 		text-decoration: none;
 
 		&:hover {
@@ -819,22 +818,20 @@ $baseurl: '{{ site.baseurl }}/images';
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
-		background-color: transparent;
+		background-color: #74f2d2;
 		border-radius: 3px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px _palette(border);
-		color: _palette(fg-bold);
+		color: grey;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.8em;
+		font-size: 0.7em;
 		font-weight: _font(weight-bold);
 		height: 3.125em;
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 3.125em;
-		padding: 0 2.75em;
+		padding: 0 2em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -856,7 +853,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		&.fit {
 			display: block;
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 100%;
+			width: 80%;
 		}
 
 		&.small {
@@ -1641,15 +1638,17 @@ $baseurl: '{{ site.baseurl }}/images';
 	#cta {
 		.inner {
 			@include vendor('display', 'flex');
-			max-width: 45em;
+			max-width: 53em;
 
 			header {
 				@include vendor('order', '1');
 				padding-right: 3em;
 				width: 70%;
 
+
 				p {
 					color: inherit;
+					width: 70%;
 				}
 			}
 
@@ -1745,9 +1744,9 @@ $baseurl: '{{ site.baseurl }}/images';
 /* Footer */
 
 	#footer {
-		@include padding(6em, 0);
+		@include padding(1em, 0);
 		background-color: darken(_palette(bg), 8);
-		text-align: center;
+		text-align: left;
 
 		.icons {
 			font-size: 1.25em;
@@ -1766,8 +1765,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
-			padding: 0;
-			text-transform: uppercase;
+			padding: 0 0 0 5em;
 
 			li {
 				border-left: solid 1px _palette(fg-light);
@@ -1822,7 +1820,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: #5f5f60;
 		}
 	}
 
@@ -1834,7 +1832,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))', 'url("#{$baseurl}/banner.jpeg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/fondo_cta.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
