@@ -1902,7 +1902,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpeg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))', 'url("#{$baseurl}/banner.jpeg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
