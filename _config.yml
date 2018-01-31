@@ -2,22 +2,20 @@
 #
 
 # Site settings
-title: Spectral
-description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
-first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+title: GalsTech
+description: Un grupo dirigido a todas las mujeres que estén trabajando o deseen iniciar una carrera en el mundo tecnológico, o simplemente que les interese la tecnología en Galicia.
+owner: GalsTech # or company name
+
+first_published:  2017 # if migrating another site, the year of your first publish
+email: info@galstech.org
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://www.galstech.org" # the base hostname & protocol for your site
 social:
-  twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
+  twitter: https://twitter.com/galstech_
+  github: https://github.com/galstech
+  #linkedin-square: https://linkedin.com/in/<username>
+  facebook-official: https://facebook.com/GalsTech-1826572957654739/
+  #google-plus-square: https://plus.google.com/u/0/+<username>
   #email: /contact/
   #flickr:
   #instagram:

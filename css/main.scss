@@ -73,8 +73,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
-		border-bottom: dotted 1px;
-		color: inherit;
+		color: #27aaa4;
 		text-decoration: none;
 
 		&:hover {
@@ -197,6 +196,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+
 	.align-left {
 		text-align: left;
 	}
@@ -208,6 +208,15 @@ $baseurl: '{{ site.baseurl }}/images';
 	.align-right {
 		text-align: right;
 	}
+
+	.img-responsive{
+		max-width: 100%;
+		height: auto;
+		display:block;
+		margin: auto;
+	}
+
+	
 
 /* Section/Article */
 
@@ -809,32 +818,30 @@ $baseurl: '{{ site.baseurl }}/images';
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
-		background-color: transparent;
+		background-color: #74f2d2;
 		border-radius: 3px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px _palette(border);
-		color: _palette(fg-bold);
+		color: grey;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.8em;
+		font-size: 0.7em;
 		font-weight: _font(weight-bold);
 		height: 3.125em;
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 3.125em;
-		padding: 0 2.75em;
+		padding: 0 2em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 
 		&:hover {
-			background-color: _palette(border-bg);
+			background-color: _palette(accent7, border);
 		}
 
 		&:active {
-			background-color: _palette(border2-bg);
+			background-color: _palette(accent7, border);
 		}
 
 		&.icon {
@@ -846,7 +853,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		&.fit {
 			display: block;
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 100%;
+			width: 80%;
 		}
 
 		&.small {
@@ -904,13 +911,13 @@ $baseurl: '{{ site.baseurl }}/images';
 				$j: 0.035 * $i;
 
 				&:nth-child(#{$i}) {
-					background-color: rgba(0,0,0, $j);
+					background-color: rgba(0,0,0, 0);
 				}
 			}
 
 			&:before {
 				display: block;
-				color: _palette(accent2, bg);
+				color: _palette(accent9, bg);
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -1248,7 +1255,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style3 {
-			@include wrapper(accent5);
+			@include wrapper(accent8);
 		}
 
 		&.style4 {
@@ -1482,6 +1489,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'center');
+		@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))', 'url("#{$baseurl}/banner.jpeg")'));
 		cursor: default;
 		height: 100vh;
 		min-height: 35em;
@@ -1522,8 +1530,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		p {
-			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
+			margin: auto;
+			color:_palette(bg);
+			width: 50%;
+			margin-top: 5%;
 
 			a {
 				color: inherit;
@@ -1623,20 +1633,92 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+/* ONE */
+	#one {
+		background-color: #ffffff;
+		& p {
+			color: #21b2a6;
+		}
+		& h2 {
+			color: #21b2a6;
+		}
+	}
+
+/* Sponsors */
+
+#sponsors {
+	@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))','url("#{$baseurl}/patrocinios.jpg")'));
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.inner {
+		@include vendor('display', 'flex');
+		max-width: 53em;
+
+		header {
+			@include vendor('order', '1');
+			padding-right: 3em;
+			width: 70%;
+			& h2 {
+				color: #000;
+			}
+
+			p {
+				color: rgb(74, 74, 74);
+				width: 70%;
+			}
+		}
+
+		.actions {
+			@include vendor('order', '2');
+			width: 30%;
+		}
+
+		@include breakpoint(medium) {
+			display: block;
+			text-align: center;
+
+			header {
+				padding-right: 0;
+				width: 100%;
+			}
+
+			.actions {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 20em;
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(small) {
+			.actions {
+				max-width: none;
+			}
+		}
+	}
+}
+
 /* CTA */
 
 	#cta {
+		@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/fondo_cta.jpg")'));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		.inner {
 			@include vendor('display', 'flex');
-			max-width: 45em;
+			max-width: 53em;
 
 			header {
 				@include vendor('order', '1');
 				padding-right: 3em;
 				width: 70%;
 
+
 				p {
 					color: inherit;
+					width: 70%;
 				}
 			}
 
@@ -1732,9 +1814,9 @@ $baseurl: '{{ site.baseurl }}/images';
 /* Footer */
 
 	#footer {
-		@include padding(6em, 0);
+		@include padding(1em, 0);
 		background-color: darken(_palette(bg), 8);
-		text-align: center;
+		text-align: left;
 
 		.icons {
 			font-size: 1.25em;
@@ -1753,8 +1835,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
-			padding: 0;
-			text-transform: uppercase;
+			padding: 0 0 0 5em;
 
 			li {
 				border-left: solid 1px _palette(fg-light);
@@ -1809,7 +1890,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: #5f5f60;
 		}
 	}
 
@@ -1821,7 +1902,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.7))', 'url("#{$baseurl}/banner.jpeg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
