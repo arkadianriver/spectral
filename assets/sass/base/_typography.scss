@@ -1,0 +1,101 @@
+///
+/// Big Picture by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Type */
+
+	body, input, textarea, select {
+		font-family: _font(family);
+		font-weight: _font(weight);
+		font-size: 18pt;
+		line-height: 1.75em;
+		color: _palette(fg);
+		letter-spacing: 0.025em;
+
+		@include breakpoint('<=xxlarge') {
+			font-size: 17pt;
+		}
+
+		@include breakpoint('<=xlarge') {
+			font-size: 15pt;
+		}
+
+		@include breakpoint('<=large') {
+			font-size: 13pt;
+		}
+
+		@include breakpoint('<=medium') {
+			font-size: 13pt;
+		}
+
+		@include breakpoint('<=small') {
+			font-size: 12pt;
+			line-height: 1.5em;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: _font(weight-bold);
+		color: inherit;
+		letter-spacing: -0.0325em;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	h2 {
+		font-size: 2.25em;
+		line-height: 1.25em;
+		letter-spacing: -0.05em;
+	}
+
+	@include breakpoint('<=small') {
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+
+	strong, b {
+		font-weight: _font(weight-bold);
+		color: inherit;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	a {
+		@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+		color: _palette(accent1, bg);
+	}
+
+	sub {
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+
+	sup {
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	hr {
+		border: 0;
+		border-top: solid 1px _palette(border);
+	}
+
+	blockquote {
+		border-left: solid 0.5em _palette(border);
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+
+	p, ul, ol, dl, table {
+		margin-bottom: 1em;
+	}

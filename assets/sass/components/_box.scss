@@ -1,0 +1,30 @@
+///
+/// Big Picture by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Box */
+
+	.box {
+		background: _palette(bg);
+		color: _palette(fg);
+		padding: 2em;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+		&.style2 {
+			padding: 3.5em 2.5em 3.5em 2.5em;
+		}
+
+		@include breakpoint('<=small') {
+			padding: 1em;
+
+			&.style2 {
+				padding: 1.5em 1.25em 1.5em 1.25em;
+				background-color: transparentize(_palette(bg), 0.1);
+			}
+		}
+	}

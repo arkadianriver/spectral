@@ -1,0 +1,159 @@
+///
+/// Big Picture by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Basic */
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	body {
+		background: _palette(bg);
+		height: 100%;
+		min-width: 320px;
+
+		// Stops initial animations until page loads.
+			&.is-preload {
+				*, *:before, *:after {
+					@include vendor('animation', 'none !important');
+					@include vendor('transition', 'none !important');
+				}
+			}
+
+	}
+
+/* Spinner */
+
+	@include keyframes('spinner-rotate') {
+		0% { @include vendor('transform', 'scale(1) rotate(0deg)'); }
+		100% { @include vendor('transform', 'scale(1) rotate(360deg)'); }
+	}
+
+/* Loader */
+
+	@include keyframes('spinner-show') {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+
+	@include keyframes('spinner-hide') {
+		0% {
+			@include vendor('transform', 'scale(1) rotate(0deg)');
+			color: _palette(border);
+			z-index: 100001;
+		}
+
+		99% {
+			@include vendor('transform', 'scale(0.5) rotate(360deg)');
+			color: _palette(border);
+			z-index: 100001;
+		}
+
+		100% {
+			@include vendor('transform', 'scale(0.5) rotate(360deg)');
+			color: _palette(border);
+			z-index: -1;
+		}
+	}
+
+	@include keyframes('overlay-hide') {
+		0% {
+			opacity: 1;
+			z-index: 100000;
+		}
+
+		15% {
+			opacity: 1;
+			z-index: 100000;
+		}
+
+		99% {
+			opacity: 0;
+			z-index: 100000;
+		}
+
+		100% {
+			opacity: 0;
+			z-index: -1;
+		}
+	}
+
+	body {
+		text-decoration: none;
+
+		&:before {
+			@include vendor('animation', ('spinner-show 1.5s 1 0.25s ease forwards', 'spinner-hide 0.25s ease-in-out forwards !important'));
+			@include vendor('transform-origin', '50% 50%');
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+			color: _palette(border);
+			content: '\f1ce';
+			cursor: default;
+			display: block;
+			font-size: 2em;
+			height: 2em;
+			left: 50%;
+			line-height: 2em;
+			margin: -1em 0 0 -1em;
+			opacity: 0;
+			position: fixed;
+			text-align: center;
+			top: 50%;
+			width: 2em;
+			z-index: -1;
+		}
+
+		&:after {
+			@include vendor('animation', 'overlay-hide 1.5s ease-in forwards !important');
+			background: #ffffff;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+
+		&.is-preload {
+			&:before {
+				@include vendor('animation', ('spinner-show 1.5s 1 0.25s ease forwards', 'spinner-rotate 0.75s infinite linear !important'));
+				z-index: 100001;
+			}
+
+			&:after {
+				@include vendor('animation', 'none !important');
+				opacity: 1;
+				z-index: 100000;
+			}
+		}
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 2) {
+		body:before {
+			line-height: 2.025em;
+		}
+	}
