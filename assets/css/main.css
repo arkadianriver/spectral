@@ -2267,6 +2267,20 @@ body.is-touch .main {
     background-position: top left, center center;
 }
 
+#project1 {
+    background: url("images/overlay.png"), url("../../images/intro.jpg");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+
+#project2 {
+    background: url("images/overlay.png"), url("../../images/two.jpg");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+
 /* Contact */
 
 #contact {
@@ -2314,7 +2328,7 @@ body.is-touch .main {
 }
 
 .project_tech_icon {
-    width: 250px;
+    width: 40%;
     margin: 10px;
 }
 
@@ -2324,5 +2338,17 @@ body.is-touch .main {
 
 .me {
     border-radius: 50%;
-    width: 400px;
+    width: 40%;
+}
+
+.project1_contents_font {
+    font-size: 12pt; color: black;
+}
+
+.project2_contents {
+    padding: 5px;
+}
+
+.project2_contents_img {
+    width: 50%;
 }
