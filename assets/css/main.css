@@ -2281,6 +2281,13 @@ body.is-touch .main {
     background-position: top left, center center;
 }
 
+#project3 {
+    background: url("images/overlay.png"), url("../../images/one.jpg");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+
 /* Contact */
 
 #contact {
@@ -2351,4 +2358,31 @@ body.is-touch .main {
 
 .project2_contents_img {
     width: 50%;
+}
+
+.typing {
+    position: relative;
+    line-height: 24px;
+    display: inline-block;
+    color: #FFF;
+    min-width: 1px;
+    min-height: 24px;
+}
+.typing:after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    right: -2px;
+    width: 1px;
+    height: 90%;
+    border-right: 2px solid #FFF;
+    animation: blink .5s infinite ease;
+}
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1%;
+    }
 }

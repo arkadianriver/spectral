@@ -5,7 +5,6 @@
 */
 
 (function ($) {
-
     var $window = $(window),
         $body = $('body'),
         $header = $('#header'),
@@ -247,4 +246,25 @@
         .on('load', function () {
             $window.trigger('resize');
         });
+
+    var typeString = ['Attractive and Fascinating Developer Wookey Portfolio'];
+    var  i = 0;
+    var count = 0
+    var selectedText = '';
+    var text = '';
+    (function type() {
+
+        selectedText = typeString[count];
+        text = selectedText.slice(0, ++i);
+        document.getElementById('typing').innerHTML = text;
+        if (text.length === selectedText.length) {
+            count++;
+            i = 0;
+        }
+        setTimeout(type, 100);
+    }());
+
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
 })(jQuery);
