@@ -52,7 +52,6 @@
     <a href="#two" class="button style2 down anchored">Next</a>
 </section>
 
-<!-- Two -->
 <section id="two" class="main style2 left dark fullscreen">
     <div class="content box style2">
         <header>
@@ -67,7 +66,7 @@
         <div>2018.01 ~ | 티몬 정규직 입사, BackEnd 서버 개발자</div>
         </p>
     </div>
-    <a href="#three" class="button style2 down anchored">Next</a>
+    <a href="#three" class="button style2 down anchored" style="display: block">Next</a>
 </section>
 
 <section id="three" class="main style1 right dark fullscreen">
@@ -75,32 +74,34 @@
         <header>
             <h2>Available Tech</h2>
         </header>
-        <img src="images/tech_icon/html5.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/c++.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/jira.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/nodejs.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/bitbucket.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/bootstrap.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/cssap.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/couchbase.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/rabbitMq.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/github.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/js.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/jenkins.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/jquery.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/scouter.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/java.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/css.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/nginx.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/angular.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/kibana.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/mysql.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/jsp.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/redis.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/spring.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/tomcat.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/mybatis.png" width="9%" class="tech_icon">
-        <img src="images/tech_icon/maven.png" width="9%" class="tech_icon">
+        <div style="width: 100%">
+            <img src="images/tech_icon/html5.png" class="tech_icon">
+            <img src="images/tech_icon/c++.png" class="tech_icon">
+            <img src="images/tech_icon/jira.png" class="tech_icon">
+            <img src="images/tech_icon/nodejs.png" class="tech_icon">
+            <img src="images/tech_icon/bitbucket.png" class="tech_icon">
+            <img src="images/tech_icon/bootstrap.png" class="tech_icon">
+            <img src="images/tech_icon/cssap.png"  class="tech_icon">
+            <img src="images/tech_icon/couchbase.png" class="tech_icon">
+            <img src="images/tech_icon/rabbitMq.png" class="tech_icon">
+            <img src="images/tech_icon/github.png" class="tech_icon">
+            <img src="images/tech_icon/js.png" class="tech_icon">
+            <img src="images/tech_icon/jenkins.png" class="tech_icon">
+            <img src="images/tech_icon/jquery.png" class="tech_icon">
+            <img src="images/tech_icon/scouter.png" class="tech_icon">
+            <img src="images/tech_icon/java.png" class="tech_icon">
+            <img src="images/tech_icon/css.png" class="tech_icon">
+            <img src="images/tech_icon/nginx.png" class="tech_icon">
+            <img src="images/tech_icon/angular.png" class="tech_icon">
+            <img src="images/tech_icon/kibana.png" class="tech_icon">
+            <img src="images/tech_icon/mysql.png" class="tech_icon">
+            <img src="images/tech_icon/jsp.png" class="tech_icon">
+            <img src="images/tech_icon/redis.png" class="tech_icon">
+            <img src="images/tech_icon/spring.png" class="tech_icon">
+            <img src="images/tech_icon/tomcat.png" class="tech_icon">
+            <img src="images/tech_icon/mybatis.png" class="tech_icon">
+            <img src="images/tech_icon/maven.png" class="tech_icon">
+        </div>
     </div>
     <a href="#project1" class="button style2 down anchored">Next</a>
 </section>
@@ -132,72 +133,39 @@
                 저장소에 대한 설명은 아래 모식도 및 하단에 상세 설명이 있습니다.<br>
                 또한 Meta Channel에 노출되는 쿠폰 정보를 관리 할 수 있도록 했습니다. <br>
             </p>
-            <img src="images/project/project1.JPG" width="100%">
+            <img src="images/project/project1.JPG" class="projects" width="100%">
         </header>
-        <div id="wrapper">
-            <div id="slider-wrap">
-                <ul id="slider">
-                    <li>
-                        <div>
-                            <span><img src="images/tech_icon/mysql.png" class="project_tech_icon"></span>
-                            <p class="project1_contents_font">
-                                내부 관리 데이터로, 가장 최신의 데이터를 반영하고 있습니다. <br>
-                                따라서 모든 원천 데이터는 mysql rdb 정보를 기준으로 정리되도록 합니다. <br>
-                                쿠폰에 대한 정책정보 외 수량, 발급, 대상, 로그 등의 데이터를 저장하도록 했습니다. <br>
-                                java에서 받은 data params을 mybatis를 통해 sql query 를 mapping 시켰습니다. <br>
-                                각 mapper file들은 package 단위로 관리하며, 각각의 repository에 연결시켰습니다.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="images/tech_icon/redis.png" class="project_tech_icon">
-                            <p class="project1_contents_font">
-                                쿠폰정보를 캐싱하여 사용자 클라이언트에서 사용하기 위한 용도입니다. <br>
-                                클라이언트에서 요청이 오면, API에서 해당 정보를 통해 결과값을 내려줍니다. <br>
-                                쿠폰의 생성/수정 시, rdb의 원천정보와 일치하는지 확인 후 결과값을 저장시켰습니다. <br>
-                                레디스를 사용하기 위해, redis clients인 jedisCluster를 사용하여 시스템을 구성했습니다.<br>
-                                쿠폰의 정책정보 외 적용대상에 대한 각각의 key/value 구조를를 구성함으로써 <br>
-                                API에서 해당 정보를 통해 빠르고 정확한 데이터를 가져올 수 있도록 했습니다.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="images/tech_icon/couchbase2.png" class="project_tech_icon">
-                            <p class="project1_contents_font">
-                                쿠폰의 부가적인 정보는 couchbase를 통해 저장 및 갱신했습니다.<br>
-                                쿠폰의 혜택, 수량, 계산된 할인가 정보를 Json Document 기반으로 저장했습니다. <br>
-                                이 또한 캐싱 데이터로써, 위 정보들은 클라이언트 user view에 결과값을 내려줍니다. <br>
-                                특히, 쿠폰 어드민에서는 쿠폰의 승인여부에 따라 직접 couchbase document를 관리했습니다.<br>
-                                그리고 쿠폰의 대상이 변경된 경우, couchbase 정보를 갱신하기 위해 redis에 갱신을 위한<br>
-                                쿠폰번호를 저장함으로써, 갱신용 Batch 작업을 통해 couchbase 정보를 갱신시켰습니다.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="images/tech_icon/rabbitMq.png" class="project_tech_icon"
-                                 style="margin-top: 50px"><br>
-                            <p class="project1_contents_font">
-                                쿠폰의 갱신시, meta channel(제휴사)에 노출되는 상품의 쿠폰에 대해 동기화가 필요합니다. <br>
-                                이를 해결하기 위해 RabbitMq를 이용하였으며, meta channel의 상품 중 쿠폰이 적용된<br>
-                                딜(상품)에 대한 변경이 있을 시 동기화를 위해 딜번호를 message queue에 전송시켰습니다. <br>
-                                해당 message queue 정보를 기반으로 meta channel에 대한 쿠폰정보를 갱신하는 Batch와 함께<br>
-                                주기적으로 제휴사 쿠폰 정보를 갱신시킬 수 있게 구성했습니다.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-
-                <!--controls-->
-                <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-                <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-                <div id="counter"></div>
-            </div>
+        <div>
+            <img src="images/tech_icon/mysql.png" class="project2_contents_img">
+            <p>
+                mysql은 내부 관리 데이터 저장소로, 가장 최신의 데이터를 반영하고 있습니다. <br>
+                따라서 모든 원천 데이터는 mysql rdb 정보를 기준으로 정리되도록 합니다. <br>
+                쿠폰에 대한 정책정보 외 수량, 발급, 대상, 로그 등의 데이터를 저장하도록 했습니다. <br>
+                java에서 받은 data params을 mybatis를 통해 sql query 를 mapping 시켰습니다. <br>
+                각 mapper file들은 package 단위로 관리하며, 각각의 repository에 연결시켰습니다.
+            </p><br>
+            <img src="images/tech_icon/redis.png" class="project2_contents_img"/></a>
+            <p>쿠폰정보를 캐싱하여 사용자 클라이언트에서 사용하기 위한 용도입니다. <br>
+                클라이언트에서 요청이 오면, API에서 해당 정보를 통해 결과값을 내려줍니다. <br>
+                쿠폰의 생성/수정 시, rdb의 원천정보와 일치하는지 확인 후 결과값을 저장시켰습니다. <br>
+                레디스를 사용하기 위해, redis clients인 jedisCluster를 사용하여 시스템을 구성했습니다.<br>
+                쿠폰의 정책정보 외 적용대상에 대한 각각의 key/value 구조를를 구성함으로써 <br>
+                API에서 해당 정보를 통해 빠르고 정확한 데이터를 가져올 수 있도록 했습니다.
+            </p><br>
+            <img src="images/tech_icon/couchbase2.png" class="project2_contents_img"/></a>
+            <p>쿠폰의 부가적인 정보는 couchbase를 통해 저장 및 갱신했습니다.<br>
+                쿠폰의 혜택, 수량, 계산된 할인가 정보를 Json Document 기반으로 저장했습니다. <br>
+                이 또한 캐싱 데이터로써, 위 정보들은 클라이언트 user view에 결과값을 내려줍니다. <br>
+                특히, 쿠폰 어드민에서는 쿠폰의 승인여부에 따라 직접 couchbase document를 관리했습니다.<br>
+                그리고 쿠폰의 대상이 변경된 경우, couchbase 정보를 갱신하기 위해 redis에 갱신을 위한<br>
+                쿠폰번호를 저장함으로써, 갱신용 Batch 작업을 통해 couchbase 정보를 갱신시켰습니다.
+            </p><br>
+            <img src="images/tech_icon/rabbitMq.png" class="project2_contents_img"/></a>
+            <p>쿠폰의 갱신시, meta channel(제휴사)에 노출되는 상품의 쿠폰에 대해 동기화가 필요합니다. <br>
+                이를 해결하기 위해 RabbitMq를 이용하였으며, meta channel의 상품 중 쿠폰이 적용된<br>
+                딜(상품)에 대한 변경이 있을 시 동기화를 위해 딜번호를 message queue에 전송시켰습니다. <br>
+                해당 message queue 정보를 기반으로 meta channel에 대한 쿠폰정보를 갱신하는 Batch와 함께<br>
+                주기적으로 제휴사 쿠폰 정보를 갱신시킬 수 있게 구성했습니다.</p>
         </div>
     </div>
     <a href="#project2" class="button style2 down anchored">Next</a>
@@ -235,7 +203,7 @@
                 원본데이터의 그룹 파티셔닝이 된 테이블을 만듭니다. 이후, 파티션별로 발급을 진행하며<br>
                 실제로 발급된 쿠폰은 mysql의 쿠폰발급, 로그 테이블에 각각 데이터를 insert합니다.
             </p>
-            <img src="images/project/project2.JPG" class="tech_icon" width="100%"><br>
+            <img src="images/project/project2.JPG" class="projects" width="100%"><br>
             전 고객대상으로 쿠폰발급을 진행 할 경우, 많게는 한번에 3천만장의 쿠폰을 발급했습니다.<br>
             이는, 실제로 batch system을 통해 발급할 시, 물리적 시간으로만 최소 3~4일이 소요됬습니다.<br>
             쿠폰의 중복, 오발급, 누락등의 이슈가 발생될 경우 정산에도 문제가 발생할 수 있기때문에<br>
@@ -300,7 +268,7 @@
             교내 사이트에서 제공되는 식단, 버스정보 등을 crawling 하고 데이터를 가공함으로써<br>
             제공된 정보로 사용자들끼리 다양한 의견을 주고 받을 수 있는 공간을 만들어줬습니다.
        </p>
-            <img src="images/project/project3.JPG" class="tech_icon" width="100%"><br>
+            <img src="images/project/project3.JPG" class="projects" width="100%"><br>
     </div>
 </section>
 
@@ -324,7 +292,7 @@
 <footer id="footer">
     <ul class="menu">
         <li>&copy; wookey</li>
-        <li>Developer since 2018~ </li>
+        <li>Developer since 2018~ing </li>
     </ul>
 </footer>
 

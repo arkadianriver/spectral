@@ -261,7 +261,7 @@
             count++;
             i = 0;
         }
-        setTimeout(type, 100);
+        setTimeout(type, 125);
     }());
 
     $(document).ready(function(){

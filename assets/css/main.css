@@ -2314,25 +2314,11 @@ body.is-touch .main {
     transform: translateY(100%);
 }
 
-@media screen and (max-width: 736px) {
-
-    #contact .box {
-        padding: 1.5em 1.5em 2em 1.5em;
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-
-    #contact .box {
-        padding: 1em 1em 2em 1em;
-    }
-
-}
-
 .tech_icon {
     margin: 10px;
+    width: 9%;
 }
+
 
 .project_tech_icon {
     width: 40%;
@@ -2357,7 +2343,7 @@ body.is-touch .main {
 }
 
 .project2_contents_img {
-    width: 50%;
+    width: 30%;
 }
 
 .typing {
@@ -2385,4 +2371,29 @@ body.is-touch .main {
     100% {
         opacity: 1%;
     }
+}
+
+@media screen and (max-width: 736px) {
+
+    #contact .box {
+        padding: 1.5em 1.5em 2em 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #contact .box {
+        padding: 1em 1em 2em 1em;
+    }
+
+    .tech_icon {
+        width: 50px;
+    }
+
+    .me {
+        width: 100%;
+    }
+
+
 }
