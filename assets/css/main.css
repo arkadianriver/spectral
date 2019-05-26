@@ -2253,6 +2253,13 @@ body.is-touch .main {
     background-position: top left, center center;
 }
 
+#project4 {
+    background: url("images/overlay.png"), url("../../images/two.jpg");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+
 /* Contact */
 
 #contact {
@@ -2303,11 +2310,11 @@ body.is-touch .main {
     font-size: 12pt; color: black;
 }
 
-.project2_contents {
+.project_contents {
     padding: 5px;
 }
 
-.project2_contents_img {
+.project_contents_img {
     width: 30%;
 }
 
