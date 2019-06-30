@@ -1,55 +1,49 @@
 // Misc.
 	$misc: (
-		z-index-base:		10000
+		z-index-base:		10000,
+		z-index-overlay:	100000,
+		max-spotlight:		20
 	);
 
 // Duration.
 	$duration: (
+		navPanel:			0.5s,
 		transition:			0.2s,
-		fade-in:			1s
+		landing-fadein:		1.5s
 	);
 
 // Size.
 	$size: (
-		element-margin:		2em
+		border-radius:		4px,
+		element-height:		3em,
+		element-margin:		2em,
+		navPanel:			275px,
+		container-width:	70em
 	);
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', 'sans-serif'),
-		weight:				300,
-		weight-bold:		900
+		family:				('Roboto', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				100,
+		weight-bold:		300
 	);
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		bg-alt:				#f5f6f7,
-		fg:					#39454b,
-		fg-bold:			#39454b,
-		border:				#e5e6e7,
-		dark: (
-			bg:				#39454b,
-			fg:				#ffffff,
-			fg-bold:		#ffffff,
-			border:			#ffffff
-		),
-		accent1: (
-			bg:				#98c593,
-			fg:				#ffffff,
-			fg-bold:		#ffffff,
-			border:			#ffffff
-		),
-		accent2: (
-			bg:				#9ac8e9,
-			fg:				#ffffff,
-			fg-bold:		#ffffff,
-			border:			#ffffff
-		),
-		accent3: (
-			bg:				#39454b,
-			fg:				rgba(185,186,187,0.5),
-			fg-bold:		rgba(185,186,187,1),
-			border:			rgba(185,186,187,0.2)
-		)
+		bg:					#1c1d26,
+		bg-transparent:		rgba(23,24,32,0.95),
+		fg-bold:			#ffffff,
+		fg:					rgba(255,255,255,0.75),
+		fg-light:			rgba(255,255,255,0.5),
+		fg-lighter:			rgba(255,255,255,0.15),
+		border:				rgba(255,255,255,0.3),
+		border-bg:			rgba(255,255,255,0.075),
+		border2:			rgba(255,255,255,0.5),
+		border2-bg:			rgba(255,255,255,0.25),
+		accent1:			#e44c65,
+		accent2:			#272833,
+		accent2-transparent:rgba(39,40,51,0.965),
+		accent3:			#5480f1,
+		accent4:			#39c088
 	);
