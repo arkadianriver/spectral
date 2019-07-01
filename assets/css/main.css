@@ -2780,6 +2780,10 @@ table td {
 	padding: 10px;
 }
 
+.project_contents_img {
+	width: 50%;
+}
+
 
 /*
 	.table-wrapper {
@@ -4080,7 +4084,7 @@ table td {
 
 	@media screen and (max-width: 480px) {
 		.tech_icon {
-			width: 50px;
+			width: 65px;
 			padding: 10px;
 		}
 
