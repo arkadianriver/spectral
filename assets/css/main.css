@@ -647,6 +647,16 @@ input, select, textarea {
 			z-index: 100000;
 		}
 
+		.projects {
+				width: 800px;
+				text-align: center;
+				margin: 0 auto;
+		}
+
+		.document_contant {
+			padding-bottom: 10px;
+		}
+
 	@media (-webkit-min-device-pixel-ratio: 2) {
 
 		body.landing:before {
@@ -4083,6 +4093,14 @@ table td {
 /* XSmall */
 
 	@media screen and (max-width: 480px) {
+		.projects {
+				width: 100%;
+		}
+
+		.document_contant {
+			padding-bottom: 5px;
+		}
+
 		.tech_icon {
 			width: 60px;
 			padding: 10px;

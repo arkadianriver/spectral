@@ -69,11 +69,6 @@
           <img src="images/tech_icon/maven.png" class="tech_icon">
           <br><br>
 
-          <h3>친해지고 싶은 사이</h3>
-          <img src="images/tech_icon/react.png" class="tech_icon">
-          <img src="images/tech_icon/aws.png" class="tech_icon">
-          <br><br>
-
           <h3>점점 친해지고 있는 사이</h3>
           <img src="images/tech_icon/nodejs.png" class="tech_icon">
           <img src="images/tech_icon/couchbase.png" class="tech_icon">
@@ -84,15 +79,17 @@
           <img src="images/tech_icon/tomcat.png" class="tech_icon">
           <br><br>
 
+          <h3>친해지고 싶은 사이</h3>
+          <img src="images/tech_icon/react.png" class="tech_icon">
+          <img src="images/tech_icon/aws.png" class="tech_icon">
+          <br><br>
+
           <h3>도움을 많이 받는 사이</h3>
           <img src="images/tech_icon/jira.png" class="tech_icon">
           <img src="images/tech_icon/bitbucket.png" class="tech_icon">
           <img src="images/tech_icon/kibana.png" class="tech_icon">
           <img src="images/tech_icon/jenkins.png" class="tech_icon">
           <img src="images/tech_icon/scouter.png" class="tech_icon">
-
-
-
         </section>
         <hr>
 
@@ -104,28 +101,42 @@
           <header class="major">
             <h3>1. Coupon Admin System</h3>
             <p>
-              쿠폰에 적용되는 복잡하고 다양한 정책정보를 쉽게 컨트롤할 수 있는 화면입니다.<br>
-              쿠폰 생성/수정 시, 사용 용도에 따라 <b>저장소</b>를 다르게 사용합니다.<br>
-              각 저장소의 고유 특징을 통해, 쿠폰의 다양한 정책정보를 용도에 맞게 저장·관리합니다.
+              쿠폰에 적용되는 복잡하고 다양한 정책정보를 핸들링 할 수 있는 쿠폰 어드민 입니다.<br>
+              쿠폰의 운영 방식에 따른 다양한 스킴의 쿠폰을 생성, 관리 합니다. <br>
             </p>
           </header>
-          <img src="images/project/project1.JPG" class="projects" width="100%">
-          <div style="text-align: left">
-            <b>mysql</b><br>
-            - mysql은 내부 관리 데이터 저장소로, 가장 최신의 원천 데이터를 관리<br>
-            - spring server에서 mybatis mapper를 통한 sql 관리<br>
+          <div class="projects">
+            <img src="images/project/project1.JPG" class="image fit">
+            <div style="text-align: left">
+              쿠폰의 수 많은 정책 데이터 정보를 관리하는 시스템을 유지 및 관리 보수<br><br>
+              <ul style="list-style-type: square;">
+                <li class="document_contant">계속적으로 변동되는 정책에 무분별하게 난무된 추가 및 방어 로직들의 캡슐화하고,
+                  역할과 책임을 기반으로 수 많은 레거시 코드를 유지관리 했습니다.</li>
 
-            <b>redis</b><br>
-            - redis clients jedisCluster를 사용하여 레디스 연결<br>
-            - 쿠폰의 수량, 적용대상, 만료 번호 등을 저장하여 각종 api, batch를 위한 데이터 저장<br>
+                <li class="document_contant">대대적인 리펙토링을 TDD 기반으로 진행하여,
+                  60개가 넘는 쿠폰 정책 정보에 대한 단일 책임 수준의 검증이 가능하도록 개발했습니다. </li>
+              </ul>
 
-            <b>couchbase</b><br>
-            - 쿠폰의 혜택, 계산된 가격 정보 등을 Json Document 기반으로 저장 및 관리<br>
-            - user client side에서 사용 될 데이터 정보들을 저장<br>
+              쿠폰의 사용 용도에 따라 다양한 방법으로 기반 정책정보를 활용할 수 있도록 개발<br><br>
+              <ul style="list-style-type: square;">
+                <li class="document_contant">기본적으로 Mysql은 내부 관리 데이터 저장소로, 가장 최신의 원천 데이터를 관리합니다.
+                  원천데이터 정보가 변경되면, 쿠폰에 대한 정책정보 갱신api를 호출하도록 개발했으며 갱신 후 api에서는 memcached를 통해 쿠폰정보를 캐싱했습니다.
 
-            <b>rabbit mq</b><br>
-            - 쿠폰의 갱신시, meta channel(제휴사)에 노출되는 상품의 쿠폰에 대해 동기화가 필요<br>
-            - 쿠폰의 변경이 있을 시 동기화를 위해 쿠폰이 적용된 딜번호를 message queue에 전송<br>
+                <li class="document_contant">Redis는 redis clients의 jedisCluster를 사용하여 레디스 연결 설정을 했습니다.
+                  각 쿠폰의 생성 및 변경 정보에 대한 수량 정보, 여러 batch job에 필요한 휘발성 데이터 정보, Immutable 데이터 정보 등
+                  in-memory 기반으로 다양한 집군의 api, batch에 필요한 가공 데이터 정보를 저장하도록 개발했습니다.
+
+                <li class="document_contant">Couchbase를 활용하여 쿠폰의 혜택, 계산된 가격 정보 등을 Json Document 기반으로 저장 및 관리했습니다.
+                  레디스와 마찬가지로 in-memory 기반의 데이터지만 버킷단위로 document를 지원하는 장점을 이용하여 ,
+                  user side에서 필요한 데이터를 제공하기 위해 개발했습니다.
+                </li>
+
+                <li class="document_contant">쿠폰의 생성, 변경에 따라 meta channel(제휴사)에 변경정보를 트리거 해주기 위한 용도로, RabbitMQ를 사용했습니다.
+                  쿠폰의 적용상품 대상을 기준으로 생성·변경 된 상품 번호만 필터링하여 대상 exchange 내 특정 queue에 적재하도록 개발했습니다.
+                  mq 정보는 제휴사 쿠폰정보 갱신 batch를 통해 해당 mq를 소비하며 갱신하도록 진행되고 있습니다.
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <hr>
@@ -140,12 +151,14 @@
               대용량 처리를 위해 hadoop driver hive 를 사용했습니다.
             </p>
           </header>
-          <img src="images/project/project2.JPG" class="projects" width="100%"><br>
-          <div style="text-align: left">
-            - hadoop driver hive를 통해 대량의 고객쿠폰 데이터를 적재<br>
-            - 내부적으로 데이터를 파티셔닝 및 가공하여 hive에 중간테이블 데이터 적재<br>
-            - batch를 통해 중간테이블 정보로 쿠폰발급을 진행, 완료 후 중간테이블 삭제<br>
-            - 각각의 발급정보를 쿠폰발급 및 로그 테이블에 적재<br>
+          <div class="projects">
+            <img src="images/project/project2.JPG" class="image fit"><br>
+            <div style="text-align: left">
+              - hadoop driver hive를 통해 대량의 고객쿠폰 데이터를 적재<br>
+              - 내부적으로 데이터를 파티셔닝 및 가공하여 hive에 중간테이블 데이터 적재<br>
+              - batch를 통해 중간테이블 정보로 쿠폰발급을 진행, 완료 후 중간테이블 삭제<br>
+              - 각각의 발급정보를 쿠폰발급 및 로그 테이블에 적재<br>
+            </div>
           </div>
         </section>
         <hr>
@@ -163,15 +176,15 @@
 
           <table>
             <tr>
-              <td><a href="images/project/pompom1.png" class="image fit project_contents_img"><img src="images/project/pompom1.png" title="PC - 타임라인 화면" alt="" /></a></td>
-              <td><a href="images/project/pompom2.png" class="image fit project_contents_img"><img src="images/project/pompom2.png" title="PC - 친구추천 화면" alt="" /></a></td>
+              <td><img src="images/project/pompom1.png" title="PC - 타임라인 화면" alt="" /></td>
+              <td><img src="images/project/pompom2.png" title="PC - 친구추천 화면" alt="" /></td>
             </tr>
             <tr>
-              <td><a href="images/project/pompom3.png" class="image fit project_contents_img"><img src="images/project/pompom3.png" title="모바일웹 - 팔로잉 화면" alt="" /></a></td>
-              <td><a href="images/project/pompom4.png" class="image fit project_contents_img"><img src="images/project/pompom4.png" title="모바일웹 - 게시글 작성 화면" alt="" /></a></td>
+              <td><img src="images/project/pompom3.png" title="모바일웹 - 팔로잉 화면" alt="" /></td>
+              <td><img src="images/project/pompom4.png" title="모바일웹 - 게시글 작성 화면" alt="" /></td>
             </tr>
           </table>
-          <img src="images/project/project3.JPG" class="projects" width="100%"><br>
+          <img src="images/project/project3.JPG" class="projects"><br>
           <div style="text-align: left">
             - hadoop driver hive를 통해 대량의 고객쿠폰 데이터를 적재<br>
             - 내부적으로 데이터를 파티셔닝 및 가공하여 hive에 중간테이블 데이터 적재<br>
@@ -193,12 +206,12 @@
           </header>
           <table>
             <tr>
-              <td><a href="images/project/pompom1.png" class="image fit project_contents_img"><img src="images/project/roulette1.jpg" title="룰렛1" alt="" /></a></td>
-              <td><a href="images/project/pompom2.png" class="image fit project_contents_img"><img src="images/project/roulette2.jpg" title="룰렛2" alt="" /></a></td>
+              <td><img src="images/project/roulette1.jpg" title="룰렛1" alt="" /></td>
+              <td><img src="images/project/roulette2.jpg" title="룰렛2" alt="" /></td>
             </tr>
             <tr>
-              <td><a href="images/project/pompom3.png" class="image fit project_contents_img"><img src="images/project/roulette3.jpg" title="룰렛3" alt="" /></a></td>
-              <td><a href="images/project/pompom4.png" class="image fit project_contents_img"><img src="images/project/roulette4.jpg" title="룰렛4" alt="" /></a></td>
+              <td><img src="images/project/roulette3.jpg" title="룰렛3" alt="" /></td>
+              <td><img src="images/project/roulette4.jpg" title="룰렛4" alt="" /></td>
             </tr>
           </table>
           <img src="images/project/project4.JPG" class="projects" width="100%"><br>

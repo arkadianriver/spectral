@@ -366,6 +366,10 @@
 		}
 	}
 
+	.projects {
+		width: 600px;
+	}
+
 	@media (-webkit-min-device-pixel-ratio: 2) {
 		body.landing:before {
 			line-height: 2.025em;
