@@ -109,29 +109,35 @@
             <img src="images/project/project1.JPG" class="image fit">
             <div style="text-align: left">
               쿠폰의 수 많은 정책 데이터 정보를 관리하는 시스템을 유지 및 관리 보수<br><br>
-              <ul style="list-style-type: square;">
-                <li class="document_contant">계속적으로 변동되는 정책에 무분별하게 난무된 추가 및 방어 로직들의 캡슐화하고,
-                  역할과 책임을 기반으로 수 많은 레거시 코드를 유지관리 했습니다.</li>
 
-                <li class="document_contant">대대적인 리펙토링을 TDD 기반으로 진행하여,
-                  60개가 넘는 쿠폰 정책 정보에 대한 단일 책임 수준의 검증이 가능하도록 개발했습니다. </li>
+              <ul style="list-style-type: square;">
+                <li class="project_contant">계속적으로 변동되는 정책에 무분별하게 난무된 추가 및 방어 로직들의 캡슐화하고,
+                  역할과 책임을 기반으로 수 많은 레거시 코드를 유지관리 했습니다.
+                </li>
+
+                <li class="project_contant">대대적인 리펙토링을 TDD 기반으로 진행하여,
+                  60개가 넘는 쿠폰 정책 정보에 대한 단일 책임 수준의 검증이 가능하도록 개발했습니다.
+                </li>
               </ul>
 
               쿠폰의 사용 용도에 따라 다양한 방법으로 기반 정책정보를 활용할 수 있도록 개발<br><br>
-              <ul style="list-style-type: square;">
-                <li class="document_contant">기본적으로 Mysql은 내부 관리 데이터 저장소로, 가장 최신의 원천 데이터를 관리합니다.
-                  원천데이터 정보가 변경되면, 쿠폰에 대한 정책정보 갱신api를 호출하도록 개발했으며 갱신 후 api에서는 memcached를 통해 쿠폰정보를 캐싱했습니다.
 
-                <li class="document_contant">Redis는 redis clients의 jedisCluster를 사용하여 레디스 연결 설정을 했습니다.
+              <ul>
+                <li class="project_contant">기본적으로 Mysql은 내부 관리 데이터 저장소로, 가장 최신의 원천 데이터를 관리합니다.
+                  원천데이터 정보가 변경되면, 쿠폰에 대한 정책정보 갱신api를 호출하도록 개발했으며 갱신 후 api에서는 memcached를 통해 쿠폰정보를 캐싱했습니다.
+                </li>
+
+                <li class="project_contant">Redis는 redis clients의 jedisCluster를 사용하여 레디스 연결 설정을 했습니다.
                   각 쿠폰의 생성 및 변경 정보에 대한 수량 정보, 여러 batch job에 필요한 휘발성 데이터 정보, Immutable 데이터 정보 등
                   in-memory 기반으로 다양한 집군의 api, batch에 필요한 가공 데이터 정보를 저장하도록 개발했습니다.
+                </li>
 
-                <li class="document_contant">Couchbase를 활용하여 쿠폰의 혜택, 계산된 가격 정보 등을 Json Document 기반으로 저장 및 관리했습니다.
+                <li class="project_contant">Couchbase를 활용하여 쿠폰의 혜택, 계산된 가격 정보 등을 Json Document 기반으로 저장 및 관리했습니다.
                   레디스와 마찬가지로 in-memory 기반의 데이터지만 버킷단위로 document를 지원하는 장점을 이용하여 ,
                   user side에서 필요한 데이터를 제공하기 위해 개발했습니다.
                 </li>
 
-                <li class="document_contant">쿠폰의 생성, 변경에 따라 meta channel(제휴사)에 변경정보를 트리거 해주기 위한 용도로, RabbitMQ를 사용했습니다.
+                <li class="project_contant">쿠폰의 생성, 변경에 따라 meta channel(제휴사)에 변경정보를 트리거 해주기 위한 용도로, RabbitMQ를 사용했습니다.
                   쿠폰의 적용상품 대상을 기준으로 생성·변경 된 상품 번호만 필터링하여 대상 exchange 내 특정 queue에 적재하도록 개발했습니다.
                   mq 정보는 제휴사 쿠폰정보 갱신 batch를 통해 해당 mq를 소비하며 갱신하도록 진행되고 있습니다.
                 </li>
@@ -146,18 +152,35 @@
           <header class="major">
             <h3>2. Behind Coupon System</h3>
             <p>
-              적게는 몇십만, 많게는 약 4천만장의 쿠폰을 일괄 발급 진행했습니다.<br>
-              쿠폰에따라 전체 고객 대상으로 쿠폰을 발급할 경우도 종종 있습니다.<br>
-              대용량 처리를 위해 hadoop driver hive 를 사용했습니다.
+              사용자들의 구매 패턴에 따라 추출한 대상자 집합에 따라 개인화 쿠폰을 발급했습니다.<br>
+              비하인드 쿠폰은 사용자 뒤에서 몰래 주어지는 쿠폰 시스템을 뜻합니다.<br>
+              쿠폰 발급이 가능한 대상자들에게 자신이 발급 가능한 깜짝 버튼을 노출하도록 개발했습니다.<br>
             </p>
           </header>
           <div class="projects">
             <img src="images/project/project2.JPG" class="image fit"><br>
             <div style="text-align: left">
-              - hadoop driver hive를 통해 대량의 고객쿠폰 데이터를 적재<br>
-              - 내부적으로 데이터를 파티셔닝 및 가공하여 hive에 중간테이블 데이터 적재<br>
-              - batch를 통해 중간테이블 정보로 쿠폰발급을 진행, 완료 후 중간테이블 삭제<br>
-              - 각각의 발급정보를 쿠폰발급 및 로그 테이블에 적재<br>
+              hive와 spring batch를 통한 대용량 데이터 처리<br><br>
+
+              <ul>
+                <li class="project_contant">
+                  적게는 몇만, 많게는 천만건 이상의 사용자에 대한 개인화 데이터 정보를 처리했습니다.
+                  이러한 대용량 데이터 처리를 위해 hive를 사용했고, spring batch read/write의 파티셔닝을 통해 중간 데이터를 생성했습니다.
+
+                </li>
+              </ul>
+
+              redis key set을 활용한 쿠폰 발급 버튼 노출제어<br><br>
+              <ul>
+                <li class="project_contant">
+                  중간 데이터는 redis의 key set으로, 각 쿠폰에 대한 대상자 목록과 현재 진행중인 비하인드 쿠폰으로 구성했습니다.
+                  두가지 key set 기반 데이터를 토대로, 진행중인 비하인드 쿠폰에 대해 사용자는 자신이 대상자로 지정된 쿠폰의 발급이 가능하도록 개발했습니다.
+                </li>
+                <li class="project_contant">
+                  redis의 자료구조와 command를 통해 수백만의 대상자 집군이 여럿 존재함에도 불구하고, O(1)에 가까운 O(n)의 time complexity를 갖도록 개발했습니다.
+                  이는 쿠폰 운영 정책 상 n의 수치가 매우 작은 수치로 운영될 수 밖에 없기 때문입니다.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -168,28 +191,53 @@
           <header class="major">
             <h3>3. PomPom SNS System</h3>
             <p>
-              교내에는 자신의 학과 외 타과 및 동아리, 교내소식 등을 교류할 수 있는 공간이 없었습니다.<br>
-              졸업한 K대학의 교내 SNS를 만들었고, 사이트 이름은 POMPOM 입니다.<br>
-              오픈과 동시에 교내 600명 이상의 회원을 확보하며, 다양한 교류를 할 수 있도록 제공 했습니다.<br>
+              교내에는 자신의 학과 외 타과 및 동아리, 교내소식 등을 교류할 수 있는 공간이 존재하지 않았습니다.<br>
+              졸업한 K대학의 교내 SNS를 만들었고, 사이트 이름은 POMPOM 으로 명명했습니다.<br>
+              오픈과 동시에 교내 600명 이상의 회원을 확보하며, 다양한 교류를 할 수 있도록 개발했습니다.<br>
             </p>
           </header>
 
-          <table>
-            <tr>
-              <td><img src="images/project/pompom1.png" title="PC - 타임라인 화면" alt="" /></td>
-              <td><img src="images/project/pompom2.png" title="PC - 친구추천 화면" alt="" /></td>
-            </tr>
-            <tr>
-              <td><img src="images/project/pompom3.png" title="모바일웹 - 팔로잉 화면" alt="" /></td>
-              <td><img src="images/project/pompom4.png" title="모바일웹 - 게시글 작성 화면" alt="" /></td>
-            </tr>
-          </table>
-          <img src="images/project/project3.JPG" class="projects"><br>
-          <div style="text-align: left">
-            - hadoop driver hive를 통해 대량의 고객쿠폰 데이터를 적재<br>
-            - 내부적으로 데이터를 파티셔닝 및 가공하여 hive에 중간테이블 데이터 적재<br>
-            - batch를 통해 중간테이블 정보로 쿠폰발급을 진행, 완료 후 중간테이블 삭제<br>
-            - 각각의 발급정보를 쿠폰발급 및 로그 테이블에 적재<br>
+          <div class="projects">
+            <img class="image fit" src="images/project/pompom1.png" title="PC - 타임라인 화면" alt="" />
+            <table>
+              <tr>
+                <td><img class="image fit" src="images/project/pompom3.png" title="모바일웹 - 팔로잉 화면" alt="" /></td>
+                <td><img class="image fit" src="images/project/pompom4.png" title="모바일웹 - 게시글 작성 화면" alt="" /></td>
+              </tr>
+            </table>
+
+            <div style="text-align: left">
+              사용자 편의에 중점을 둔 노출정보 화면<br><br>
+              <ul>
+                <li class="project_contant">
+                  교내 학생들에게 가장 접근성 높은 시설정보를 크롤링을 통해 화면에 노출시켰습니다.
+                  학식 및 기숙사 메뉴, 버스운행시간 등의 시설정보를 노출하며, 단순 view 정보가 아닌 실시간으로 현재 상황을 서로 공유할 수 있도록 개발했습니다.
+                </li>
+                <li class="project_contant">
+                  화면 구성은 PC와 Mobile Web으로 지원했습니다.
+                </li>
+              </ul>
+            </div>
+
+            <img class="image fit" src="images/project/project3.JPG">
+            <div style="text-align: left">
+              빠르게 개발하며, 쉽게 접근 할 수 있는 시스템<br><br>
+              <ul>
+                <li class="project_contant">
+                  시스템의 사용자 범위는 교내 수준으로 측정했습니다.
+                  대상자가 많지 않았고, 빠른시간 내 이벤트 기반의 비동기 시스템을 구성하기 위해 nodejs로 server-side 개발을 진행 했습니다.
+                </li>
+                <li class="project_contant">
+                  사용자들은 최초 접속 시 간단한 회원가입 절차를 진행하도록 했으며, 이는 facebook sns 연동을 통해 가입을 진행했습니다.
+                  서버에는 facebook 에서 제공되는 정보 외 개인정보는 저장되지 않았으며, 최초 가입 이후 facebook을 통한 자동 로그인이 진행되도록 개발했습니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="projects">
+
           </div>
         </section>
         <hr>
@@ -204,17 +252,19 @@
               매주 월요일에 지급된 적립금을 통한 구매유도 및 판매량 증가에 기여한 시스템 입니다.
             </p>
           </header>
+          <div class="projects">
           <table>
             <tr>
-              <td><img src="images/project/roulette1.jpg" title="룰렛1" alt="" /></td>
-              <td><img src="images/project/roulette2.jpg" title="룰렛2" alt="" /></td>
+              <td><img class="image fit" src="images/project/roulette1.jpg" title="룰렛1" alt="" /></td>
+              <td><img class="image fit" src="images/project/roulette2.jpg" title="룰렛2" alt="" /></td>
             </tr>
             <tr>
-              <td><img src="images/project/roulette3.jpg" title="룰렛3" alt="" /></td>
-              <td><img src="images/project/roulette4.jpg" title="룰렛4" alt="" /></td>
+              <td><img class="image fit" src="images/project/roulette3.jpg" title="룰렛3" alt="" /></td>
+              <td><img class="image fit" src="images/project/roulette4.jpg" title="룰렛4" alt="" /></td>
             </tr>
           </table>
-          <img src="images/project/project4.JPG" class="projects" width="100%"><br>
+
+          <img class="image fit" src="images/project/project4.JPG" width="100%"><br>
           <div style="text-align: left">
             - 일2회, 주6회의 현 시스템 스케줄에 국한되지않는 범용 구조 설계<br>
             - 매주 변경되는 데이터에 대한 유동적 데이터 설계로, 배포없이 관리 가능<br>
@@ -223,6 +273,8 @@
             - spring memcached를 이용한 캐시 데이터 활용<br>
             - 오작동 및 장애에 유기적인 대응이 가능한 시스템 구성<br>
           </div>
+        </div>
+
         </section>
       </div>
       <div><br>

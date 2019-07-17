@@ -653,7 +653,11 @@ input, select, textarea {
 				margin: 0 auto;
 		}
 
-		.document_contant {
+		.projects ul {
+			list-style-type: square;
+		}
+
+		.project_contant {
 			padding-bottom: 10px;
 		}
 
@@ -4097,7 +4101,7 @@ table td {
 				width: 100%;
 		}
 
-		.document_contant {
+		.project_contant {
 			padding-bottom: 5px;
 		}
 
