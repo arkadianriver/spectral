@@ -2,25 +2,23 @@
 #
 
 # Site settings
-title: Spectral
+title: Get Her It
 description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
-first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+  Hello, my name is Timmy!
+owner: Brand 1
+first_published: 2017 # if migrating another site, the year of your first publish
+email: timmy@timmysdomain.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://www.youtube.com" # the base hostname & protocol for your site
 social:
-  twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
+  twitter: https://twitter.com/<youtube>
+  github: https://github.com/<youtube>
+  linkedin-square: https://linkedin.com/in/<youtube>
+  facebook-official: https://facebook.com/<youtube>
+  google-plus-square: https://plus.google.com/u/0/+<youtube>
   #email: /contact/
   #flickr:
-  #instagram:
+  #instagram: https://instagram.com/youtube
   #youtube-square:
   #spotify:
   #stack-overflow:
