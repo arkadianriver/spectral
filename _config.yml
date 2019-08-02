@@ -9,7 +9,7 @@ owner: Brand 1
 first_published: 2017 # if migrating another site, the year of your first publish
 email: timmy@timmysdomain.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.youtube.com" # the base hostname & protocol for your site
+url: "danm847.github.io" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/<youtube>
   github: https://github.com/<youtube>
