@@ -371,7 +371,11 @@
       <workItem from="1558852928072" duration="10230000" />
       <workItem from="1567391380707" duration="1921000" />
       <workItem from="1594041722411" duration="380000" />
+<<<<<<< HEAD
       <workItem from="1611320316947" duration="728000" />
+=======
+      <workItem from="1611320316947" duration="383000" />
+>>>>>>> 8d7b27acea9e589ae0bf52d4c3e2ff3f1a6c1738
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1611320448912</created>
