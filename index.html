@@ -101,22 +101,23 @@
           <header class="major">
             <h3>1. Coupon Admin System</h3>
             <p>
-              쿠폰에 적용되는 복잡하고 다양한 정책정보를 핸들링 할 수 있는 쿠폰 어드민 입니다.<br>
-              쿠폰의 운영 방식에 따른 다양한 스킴의 쿠폰을 생성, 관리 합니다. <br>
+              쿠폰에 적용되는 복잡한 정책정보를 관리하는 쿠폰 어드민 입니다.<br>
+              쿠폰의 운영 방식에 따라 다양한 쿠폰을 생성, 관리 합니다. <br>
             </p>
           </header>
           <div class="projects">
             <img src="images/project/project1.JPG" class="image fit">
             <div style="text-align: left">
-              쿠폰의 수 많은 정책 데이터 정보를 관리하는 시스템 유지 및 관리 보수<br><br>
+              <b>쿠폰의 수 많은 정책 데이터 관리 및 시스템 유지보수</b><br><br>
 
               <ul style="list-style-type: square;">
-                <li class="project_contant">계속적으로 변동되는 정책에 무분별하게 난무된 추가 및 방어 로직들의 캡슐화하고,
-                  역할과 책임을 기반으로 수 많은 레거시 코드를 유지관리 했습니다.
+                <li class="project_contant">계속적으로 변동되는 정책에 무분별하게 난무된 로직들의 캡슐화하고,
+                  역할과 책임을 기반으로 수 많은 레거시 코드를 유지관리
                 </li>
-
-                <li class="project_contant">대대적인 리펙토링을 TDD 기반으로 진행하며,
-                  60개가 넘는 쿠폰 정책 정보에 대한 단일 책임 수준의 검증이 가능하도록 개발했습니다.
+                <li class="project_contant">TDD 기반으로 대대적인 리펙토링을 진행하여
+                  60개가 넘는 쿠폰 정책 정보에 대한 단일 책임 수준의 검증이 가능하도록 개발
+                </li>
+                <li class="project_contant">쿠폰의 용도에 따라 MysqlDB, Redis, Couchbase, RabbitMQ 등의 오픈소스를 활용
                 </li>
               </ul>
             </div>
@@ -127,34 +128,26 @@
         <!-- project2  -->
         <section class="major">
           <header class="major">
+
             <h3>2. Behind Coupon System</h3>
             <p>
-              사용자들의 구매 패턴에 따라 추출한 대상자 집합에 따라 개인화 쿠폰을 발급했습니다.<br>
-              비하인드 쿠폰은 사용자 뒤에서 몰래 주어지는 쿠폰 시스템을 뜻합니다.<br>
-              쿠폰 발급이 가능한 대상자들에게 자신이 발급 가능한 깜짝 버튼이 노출되도록 개발했습니다.<br>
+              비하인드 쿠폰은 뒤에서 사용자 몰래 주어지는 쿠폰 시스템을 뜻합니다.<br>
+              사용자들의 구매 패턴에 맞춰 대상자 집합을 추출하고 개인화 쿠폰을 발급합니다.<br>
             </p>
           </header>
           <div class="projects">
             <img src="images/project/project2.JPG" class="image fit"><br>
             <div style="text-align: left">
-              hive와 spring batch를 통한 대용량 데이터 처리<br><br>
-
+              <b>대용량 개인화 데이터 처리</b><br><br>
               <ul>
                 <li class="project_contant">
-                  적게는 몇만, 많게는 천만건 이상의 사용자에 대한 개인화 데이터 정보를 처리했습니다.
-                  이러한 대용량 데이터 처리를 위해 hive를 사용했고, spring batch read/write의 파티셔닝을 통해 중간 데이터를 생성했습니다.
-
-                </li>
-              </ul>
-
-              redis key set을 활용한 쿠폰 발급 버튼 노출제어<br><br>
-              <ul>
-                <li class="project_contant">
-                  중간 데이터는 redis의 key set으로, 각 쿠폰에 대한 대상자 목록과 현재 진행중인 비하인드 쿠폰으로 구성했습니다.
-                  두가지 key set 기반 데이터를 토대로, 진행중인 비하인드 쿠폰에 대해 사용자는 자신이 대상자로 지정된 쿠폰의 발급이 가능하도록 개발했습니다.
+                  고객마케팅 팀과의 협업을 통해 적게는 몇만, 많게는 천만건 이상의 개인화 타겟 데이터를 인입
                 </li>
                 <li class="project_contant">
-                  redis의 자료구조와 command를 통해 수백만의 대상자 집군이 여럿 존재함에도 불구하고, O(1)에 가까운 O(n)의 time complexity를 갖도록 개발했습니다.
+                  Hive 저장소, SpringBatch read/write의 파티셔닝을 통해 Mysql로 대용량 데이터 처리 및 이관
+                </li>
+                <li class="project_contant">
+                  쿠폰함의 발급버튼 노출제어는 비하인드 쿠폰 및 대상자 정보를 Redis에 저장하여 활용
                 </li>
               </ul>
             </div>
@@ -168,8 +161,7 @@
             <h3>3. Roulette Promotion System</h3>
             <p>
               룰렛 프로모션은 타임 커머스의 효율적인 운영을 위한 다양한 혜택을 제공했습니다.<br>
-              실제로 많은 사용자들이 룰렛을 참여하고, 획득하게 된 혜택으로 상품을 구매할 수 있습니다.<br>
-              사용자 누구에게나 즐거운 혜택을 제공함으로써, 구매효율 상승 효과에 큰 기여를 했습니다.
+              많은 사용자들이 룰렛을 참여하고 획득한 혜택으로 상품을 구매할 수 있습니다.<br>
             </p>
           </header>
           <div class="projects">
@@ -186,50 +178,70 @@
 
             <img class="image fit" src="images/project/project4.JPG" width="100%">
             <div style="text-align: left">
-              다양한 할인혜택과 유연한 스케줄 설정이 가능한 설계구조<br><br>
+              <b>유연한 설정이 가능한 프로모션 설계구조</b><br><br>
               <ul>
                 <li class="project_contant">
-                  커머스의 특성상 사용자들에게 지급가능한 할인혜택은 크게 쿠폰/적립금/경품 정도로 결정됩니다.
-                  룰렛 시스템은 상품의 스킴에 상관없이 다양하게 상품 설정이 가능한 구조로 설계 했습니다.
+                  쿠폰/적립금/경품 등 상품의 스킴에 상관없이 다양하게 상품 설정이 가능한 구조로 설계
                 </li>
                 <li class="project_contant">
-                  이벤트 진행시간은 time schedule 구조로, 프로모션 진행 기간 내 유연한 스케줄링로 원하는 시간설정을 통한 노출 및 기능 제어가 가능하도록 설계했습니다.
+                  시스템 담당자가 프로모션 진행기간과 시간을 유연하게 설정할 수 있도록 스케줄링 시스템을 개발
                 </li>
               </ul>
 
-              redis와 memcached를 활용한 빠르고 정확한 실시간 당첨정보<br><br>
+              <b>일평균 40만 사용자의 참여</b><br><br>
               <ul>
                 <li class="project_contant">
-                  각 상품은 혜택에 따라 최대당첨갯수와 확률이 지정되어 있습니다.
-                  단위 시간내 수 많은 transaction 처리를 위해 in-memory 기반의 빠르고 정확한 데이터 처리에 적합한 redis를 선택했습니다.
-                  redis에는 상품 데이터 등록시, 상품별 최대당첨갯수와 현재갯수 정보를 저장하도록 개발했습니다.
+                  단위 시간내 많은 transaction 처리를 위해 Redis, Memcached 활용
                 </li>
                 <li class="project_contant">
-                  redis를 통해 실시간으로 변경되는 현재당첨 갯수를 확인 후, 유효성 검사를 진행합니다.
-                  중복지급여부 및 당첨확률 등 상품에 설정된 다양한 정보들을 확인합니다.
-                  redis를 활용한 최대당첨갯수 확인과 마찬가지로, 수 많은 transaction을 단위시간에 처리하기 위해 상품정보는 memcached를 이용하여 캐싱했습니다.
-
+                  프로모션 정책 저장시 Redis에 상품별 최대당첨갯수와 현재갯수 정보를 저장하며 프로모션 참여시 중복지급여부 및 당첨확률 등의 유효성 검사를 진행
                 </li>
-                <li>
-                  단위시간에 많은 transaction이 몰려도, redis와 memcached를 사용하여 빠르고 정확하게 실시간 경품당첨이 가능하도록 개발했습니다.
+                <li class="project_contant">
+                  프로모션의 기본정책, 상품, 스케줄링 정보 등의 immutable 정보는 Memcached를 이용하여 캐싱
                 </li>
               </ul>
 
               사용자 어뷰징 방어 처리<br><br>
               <ul>
                 <li class="project_contant">
-                  프로모션의 메인정보, 상품정보, 스케줄정보 등 모든 정보는 프로모션의 key 정보에 의존적이기 때문에 화면정보를 구성하는 데이터 및 uri에는 프로모션 key 정보가 노출되지 않도록 개발했습니다.
+                  기본적으로 크로스 체크를 통해 화면과 비즈니스 단 방어
                 </li>
                 <li class="project_contant">
-                  룰렛의 시작 버튼은 시작과 동시에 버튼이 disabled 되며, 동시에 스크립트 조작을 통한 serve request 요청이 불가능 하도록 개발 했습니다.
-                </li>
-                <li class="project_contant">
-                  서버에 공격적인 요청이 호출되는 case 방어를 위해 DB내 각 스케줄 정보와 사용자 정보를 Unique key 설정하여 비정상적인 데이터 요청건을 막을 수 있도록 개발했습니다.
+                  공격적인 다중요청 방어를 위해 스케줄 정보와 사용자 정보를 DB Unique key 설정하여 비정상적인 데이터 요청건 방어
                 </li>
               </ul>
             </div>
           </div>
+        </section>
 
+        <!-- project4  -->
+        <section class="major">
+          <header class="major">
+
+            <h3>4. HF Renewal System</h3>
+            <p>
+              한국주택금융공사(HF)
+              <br>
+              사용자들의 구매 패턴에 맞춰 대상자 집합을 추출하고 개인화 쿠폰을 발급합니다.<br>
+            </p>
+          </header>
+          <div class="projects">
+            <img src="images/project/project2.JPG" class="image fit"><br>
+            <div style="text-align: left">
+              <b>대용량 개인화 데이터 처리</b><br><br>
+              <ul>
+                <li class="project_contant">
+                  고객마케팅 팀과의 협업을 통해 적게는 몇만, 많게는 천만건 이상의 개인화 타겟 데이터를 인입
+                </li>
+                <li class="project_contant">
+                  Hive 저장소, SpringBatch read/write의 파티셔닝을 통해 Mysql로 대용량 데이터 처리 및 이관
+                </li>
+                <li class="project_contant">
+                  쿠폰함의 발급버튼 노출제어는 비하인드 쿠폰 및 대상자 정보를 Redis에 저장하여 활용
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
       <div><br>
